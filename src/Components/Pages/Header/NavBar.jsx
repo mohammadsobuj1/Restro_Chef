@@ -5,10 +5,10 @@ const NavBar = () => {
     const items = <>
         {
             <>
-                <Link>Home</Link>
+                <Link to="/">Home</Link>
                 <Link>All Toys</Link>
                 <Link>My Toys</Link>
-                <Link>Add A Toy</Link>
+                <Link to="/addtoys">Add A Toy</Link>
                 <Link> Blogs</Link>
                 <Link> Log In</Link>
             </>
