@@ -11,7 +11,7 @@ const Toys = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/alltoys/${activeTab}`)
+        fetch(`https://assainment-11-sarver.vercel.app/alltoys/${activeTab}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data)

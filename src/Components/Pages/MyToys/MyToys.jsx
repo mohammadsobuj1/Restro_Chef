@@ -9,16 +9,16 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [mytoys, setMytoys] = useState([]);
     const [control, setControl] = useState(false);
-   
+
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`https://assainment-11-sarver.vercel.app/mytoys/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
 
                 setMytoys(data);
-                
+
 
             });
     }, [user, control]);
@@ -26,22 +26,22 @@ const MyToys = () => {
 
 
     const deleteHandaler = (id) => {
-     
-        fetch(`http://localhost:5000/mytoys/${id}`, {
+
+        fetch(`https://assainment-11-sarver.vercel.app/mytoys/${id}`, {
 
             method: "DELETE",
 
         })
             .then(res => res.json())
             .then(data => {
-              
-               if(data.deletedCount > 0){
-       
-          
-               const remaining = mytoys.filter(toy => toy._id !== id)
-               setMytoys(remaining)
-          
-               }
+
+                if (data.deletedCount > 0) {
+
+
+                    const remaining = mytoys.filter(toy => toy._id !== id)
+                    setMytoys(remaining)
+
+                }
 
             })
 
@@ -65,7 +65,7 @@ const MyToys = () => {
                         </tr>
                     </thead>
                     {
-                       
+
                         mytoys?.map((mytoy, index) => <Mytoy
                             index={index + 1}
                             key={mytoy._id}
@@ -73,7 +73,7 @@ const MyToys = () => {
                             deleteHandaler={deleteHandaler}
 
                         />)
-                        
+
                     }
                 </table>
             </div>

@@ -19,7 +19,7 @@ const AddToys = () => {
         const description = from.description.value;
         const data = { name, photo, categorey, price, quantity, rating, description, email, sellarname }
 
-        fetch('http://localhost:5000/addtoys', {
+        fetch('https://assainment-11-sarver.vercel.app/addtoys', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -28,7 +28,7 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.acknowledged == true) {
+                if (data?.acknowledged == true) {
 
                     console.log(data)
 

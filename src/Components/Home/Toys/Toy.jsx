@@ -2,9 +2,10 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Toy = ({ toy }) => {
-    const { name, categorey, quantity, price, photo } = toy;
+    const { _id,name, categorey, quantity, price, photo } = toy;
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl">
@@ -15,7 +16,7 @@ const Toy = ({ toy }) => {
                     <p>{categorey}</p>
                     <p>{quantity}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                       <Link to={`detailes/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>

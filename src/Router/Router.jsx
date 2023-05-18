@@ -7,6 +7,9 @@ import AddToys from "../Components/Pages/AddToys/AddToys";
 import Registration from "../Components/Pages/Registration/Registration";
 import Login from "../Components/Pages/Login/Login";
 import MyToys from "../Components/Pages/MyToys/MyToys";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import AllToys from "../Components/Pages/AllToys/AllToys";
+import ViewDetailes from "../Components/Home/Home/ViewDetailes/ViewDetailes";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addtoys",
-                element: <AddToys />
+                element: <PrivetRoute><AddToys /></PrivetRoute>
             },
             {
                 path: "/registration",
@@ -31,9 +34,20 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mytoys',
-                element: <MyToys />,
-                loader:()=>fetch('http://localhost:5000/alltoys')
+                element: <PrivetRoute><MyToys /></PrivetRoute>,
+
+            },
+            {
+                path: "/alltoys",
+                element: <AllToys />,
+                loader: () => fetch('https://assainment-11-sarver.vercel.app/alltoys')
+            },
+            {
+                path: "detailes/:id",
+                element: <ViewDetailes />,
+                loader: ({ params }) => fetch(`https://assainment-11-sarver.vercel.app/detailes/${params.id}`)
             }
+
         ]
     },
 ]);

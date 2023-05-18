@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { useContext } from "react";
+import ActiveLink from "../../../ActiveLink/ActiveLink";
+
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -19,16 +21,16 @@ const NavBar = () => {
     const items = <>
         {
             <>
-                <Link to="/">Home</Link>
-                <Link>All Toys</Link>
+                <ActiveLink to="/">Home</ActiveLink>
+                <ActiveLink to="/alltoys">All Toys</ActiveLink>
                 {
                     user ? <>
-                        <Link to="/mytoys">My Toys</Link>
-                        <Link to="/addtoys">Add A Toy</Link>
+                        <ActiveLink to="/mytoys">My Toys</ActiveLink>
+                        <ActiveLink to="/addtoys">Add A Toy</ActiveLink>
                     </> : ""
                 }
-                <Link> Blogs</Link>
-                <Link to="/login"> Log In</Link>
+                <ActiveLink to="blog"> Blogs</ActiveLink>
+               
             </>
         }
     </>
