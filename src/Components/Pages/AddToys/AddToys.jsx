@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const AddToys = () => {
-
+    const { user } = useContext(AuthContext)
+    console.log(user?.displayName)
     const SubmitHandelar = (event) => {
+
         event.preventDefault()
         const from = event.target;
         const name = from.name.value;
@@ -9,8 +13,27 @@ const AddToys = () => {
         const categorey = from.categorey.value;
         const price = from.price.value;
         const quantity = from.quantity.value;
-        const data = { name, photo, categorey, price, quantity }
-        console.log(data)
+        const rating = from.rating.value;
+        const email = from.email.value;
+        const sellarname = from.sellarname.value;
+        const description = from.description.value;
+        const data = { name, photo, categorey, price, quantity, rating, description, email, sellarname }
+
+        fetch('http://localhost:5000/addtoys', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged == true) {
+
+                    console.log(data)
+
+                }
+            })
 
     }
 
@@ -27,7 +50,17 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="name" name="name" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="name" defaultValue={'spider man'} name="name" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+
+                        </div>
+                    </div>
+                    <div className="">
+                        <div className="flex items-center justify-between">
+                            <label className="block text-sm font-medium leading-6 text-gray-900">User Email</label>
+
+                        </div>
+                        <div className="mt-2">
+                            <input id="email" defaultValue={user?.email} name="email" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -47,7 +80,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="price" name="price" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="price" name="price" type="text" autoComplete="current-password" defaultValue={'300'} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -57,7 +90,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="Categorey" name="categorey" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="Categorey" name="categorey" type="text" autoComplete="current-password" defaultValue={'marvel'} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -67,14 +100,49 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" defaultValue={'20'} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
-                    <br />
-                    <div className="text-center">
-                        <input className="btn btn-primary" type="submit" value="Submit" />
+                    <div className="">
+                        <div className="flex items-center justify-between">
+                            <label className="block text-sm font-medium leading-6 text-gray-900">Saller Name</label>
+
+                        </div>
+                        <div className="mt-2">
+                            <input id="sellarname" name="sellarname" type="text" autoComplete="current-password" defaultValue={user?.displayName} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+
+                        </div>
                     </div>
+                    <div className="">
+                        <div className="flex items-center justify-between">
+                            <label className="block text-sm font-medium leading-6 text-gray-900">Rate Our Hero</label>
+
+                        </div>
+                        <div className="mt-2">
+                            <input id="rating" name="rating" type="text" autoComplete="current-password" defaultValue={'5'} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+
+                        </div>
+                    </div>
+
+                    <br />
+
+                </div>
+                <div className="w-[75%] mx-auto">
+                    <div className="flex items-center justify-between">
+                        <label className="block text-sm font-medium leading-6 text-gray-900"> Description </label>
+
+                    </div>
+                    <div className="mt-2">
+
+                        <textarea id="description" name="description" defaultValue={'20'} cols="60" rows="5"
+                            className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        ></textarea>
+
+                    </div>
+                </div>
+                <div className="text-center mt-5 w-[50%] mx-auto">
+                    <input className="btn btn-block" type="submit" value="Submit" />
                 </div>
             </form>
 
