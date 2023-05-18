@@ -2,24 +2,50 @@ import React, { useEffect, useState } from 'react';
 import Mytoy from './Mytoy';
 import { useContext } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import { useLoaderData } from 'react-router-dom';
+
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [mytoys, setMytoys] = useState([]);
     const [control, setControl] = useState(false);
+   
 
 
     useEffect(() => {
         fetch(`http://localhost:5000/mytoys/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+
                 setMytoys(data);
+                
+
             });
     }, [user, control]);
 
 
 
+    const deleteHandaler = (id) => {
+     
+        fetch(`http://localhost:5000/mytoys/${id}`, {
+
+            method: "DELETE",
+
+        })
+            .then(res => res.json())
+            .then(data => {
+              
+               if(data.deletedCount > 0){
+       
+          
+               const remaining = mytoys.filter(toy => toy._id !== id)
+               setMytoys(remaining)
+          
+               }
+
+            })
+
+    }
 
 
     return (
@@ -39,12 +65,15 @@ const MyToys = () => {
                         </tr>
                     </thead>
                     {
+                       
                         mytoys?.map((mytoy, index) => <Mytoy
                             index={index + 1}
                             key={mytoy._id}
                             mytoy={mytoy}
+                            deleteHandaler={deleteHandaler}
 
                         />)
+                        
                     }
                 </table>
             </div>

@@ -1,21 +1,12 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useState } from 'react';
 
-const Mytoy = ({ mytoy, index }) => {
+
+const Mytoy = ({ mytoy, index,deleteHandaler }) => {
 
     const { _id, photo, name, quantity, price } = mytoy;
-    const deleteHandaler = (id) => {
+  
+   
 
-        fetch(`http://localhost:5000/mytoys/${id}`, {
-            method: "DELETE",
-
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-            })
-
-    }
 
     return (
         <>
