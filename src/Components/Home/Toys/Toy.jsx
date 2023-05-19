@@ -3,24 +3,39 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const Toy = ({ toy }) => {
-    const { _id,name, categorey, quantity, price, photo } = toy;
+    const { _id, name, rating, quantity, price, photo } = toy;
     return (
-        <div>
-            <div className="card card-compact  bg-base-100 shadow-xl">
-                <figure><img src={photo} alt="photo" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
-                    <p>{price}</p>
-                    <p>{categorey}</p>
-                    <p>{quantity}</p>
-                    <div className="card-actions justify-end">
-                       <Link to={`detailes/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
-                    </div>
+
+        <div className="card card-compact  bg-gray-300 h-[90%] my-0 shadow-xl">
+            <figure><img src={photo} alt="photo" /></figure>
+            <div className="card-body">
+                <h2 className="card-title font-ital font-bold text-2xl"><div className='text-orange-500 font-italic'>  Hero Name :</div>{name}</h2>
+
+                <div className="flex justify-between">
+                    <div className='text-xl font-ital  font-semibold'>Price : $ {price}</div>
+
+                    <div className='text-xl font-ital  font-semibold '> Quantity : {quantity}</div>
+                </div>
+                <div className="flex gap-4">
+                    <div className='text-xl font-italic font-semibold '> rating : {rating}</div>
+                    <Rating
+                        style={{ maxWidth: 100 }}
+                        value={rating}
+                        readOnly
+                        className='text-xl'
+                    />
+                </div>
+
+                <div className=" ">
+                    <Link to={`detailes/${_id}`}> <button className=" bg-gray-600 btn btn-block ">View Details</button></Link>
                 </div>
             </div>
         </div>
+
     );
 };
 

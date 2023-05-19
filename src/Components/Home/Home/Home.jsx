@@ -1,14 +1,16 @@
+import FetureHero from "../FetureHero/FetureHero";
 import Toys from "../Toys/Toys";
 import Bannar from "./Banner/Bannar";
-// import Gallarey from "./Gallarey/Gallarey";
+import Gallarey from "./Gallarey/Gallarey";
 
 
 const Home = () => {
     return (
         <div>
             <Bannar />
-            {/* <Gallarey /> */}
+            <Gallarey />
             <Toys />
+            <FetureHero />
 
         </div>
     );

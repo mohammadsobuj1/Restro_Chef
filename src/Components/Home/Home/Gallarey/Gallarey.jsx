@@ -1,10 +1,15 @@
+import { FaCameraRetro, FaPhotoVideo } from 'react-icons/fa';
 import './Gallarey.css'
 
 const Gallarey = () => {
     return (
-        <div className='body'>
+        <div className='body py-32'>
+            <div className="flex justify-center gap-4">
 
-
+                <FaPhotoVideo className='text-5xl text-orange-400 ' />
+                <h1 className=' text-5xl  font-italic font-bold uppercase underline text-red-500'> Super Hero's galarey</h1>
+                <FaCameraRetro className='text-5xl text-orange-400 ' ></FaCameraRetro>
+            </div>
             <div className="gallery w-[100%] mx-auto mt-16">
                 <span style={{ '--i': 1 }}><img src="https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFydmVsJTIwc3VwZXIlMjBoZXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" /></span>
                 <span style={{ '--i': 2 }}><img src="https://img.freepik.com/premium-vector/spiderman-vector-illustration_677433-78.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=sph" alt="" /></span>

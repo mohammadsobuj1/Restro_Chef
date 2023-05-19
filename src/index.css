@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Open+Sans:ital,wght@1,600&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lobster&family=Open+Sans:ital,wght@1,600&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lobster&family=Luxurious+Script&family=Open+Sans:ital,wght@1,600&family=Sigmar&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

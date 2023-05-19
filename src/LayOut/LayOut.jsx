@@ -5,7 +5,7 @@ import Footer from "../Components/Pages/Footer/Footer";
 
 const LayOut = () => {
     return (
-        <div >
+        <div className="w-full">
             <Header />
             <Outlet />
             <Footer />
