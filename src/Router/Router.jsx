@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "detailes/:id",
-                element: <ViewDetailes />,
+                element: <PrivetRoute><ViewDetailes /></PrivetRoute>,
                 loader: ({ params }) => fetch(`https://assainment-11-sarver.vercel.app/detailes/${params.id}`)
             },
             {

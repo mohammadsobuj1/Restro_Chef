@@ -25,7 +25,7 @@ const Toys = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center'>Our Heros </h1>
+            <h1 className='text-5xl text-center uppercase font-pera mt-10 text-orange-300'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
 
 
             <Tabs>
@@ -33,7 +33,7 @@ const Toys = () => {
                     <Tab><div
                         onClick={() => handleTabClick("all")}
                         className={`
-                        py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "all" ? "   bg-red-500 text-white" : ""
+                        py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "all" ? "   bg-orange-500 font-ital text-white" : ""
                             }`}
                     >
                         All
@@ -41,38 +41,38 @@ const Toys = () => {
                     <Tab><div
                         onClick={() => handleTabClick("marvel")}
                         className={`
-                        py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "marvel" ? "   bg-red-500 text-white" : ""
+                        py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "marvel" ? "   bg-orange-500 font-ital text-white" : ""
                             }`}
                     >
                         Marvel
                     </div></Tab>
                     <Tab> <div
                         onClick={() => handleTabClick("dc")}
-                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "dc" ? " bg-red-500 text-white" : ""
+                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "dc" ? " bg-orange-500 font-ital text-white" : ""
                             }`}
                     >
                         DC
                     </div></Tab>
                     <Tab><div
                         onClick={() => handleTabClick("starwear")}
-                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "starwear" ? "  bg-red-500 text-white" : ""
+                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "starwear" ? "  bg-orange-500 font-ital text-white" : ""
                             }`}
                     >
                         Star Wear
                     </div></Tab>
                 </TabList>
 
-                <TabPanel>
-                    All heros Here
+                <TabPanel >
+                    <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>ALL <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                    Marvel Heros are Here
+                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>marvel <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                    DC Heros are Here
+                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>dc <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                    Star Wear Heros are Here
+                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>star wear <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
             </Tabs>
 

@@ -1,13 +1,31 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Toy = ({ toy }) => {
+
+
+
     const { _id, name, rating, quantity, price, photo } = toy;
+    const { user } = useContext(AuthContext)
+    const veryFiedHandaler = () => {
+        if (!user) {
+            toast.error("Log In First")
+        }
+        else {
+
+        }
+    }
+
+
+
     return (
 
         <div className="card card-compact  bg-gray-300 h-[90%] my-0 shadow-xl">
@@ -31,9 +49,16 @@ const Toy = ({ toy }) => {
                 </div>
 
                 <div className=" ">
-                    <Link to={`detailes/${_id}`}> <button className=" bg-gray-600 btn btn-block ">View Details</button></Link>
+
+                    <Link to={`detailes/${_id}`}> <button onClick={veryFiedHandaler} className=" bg-gray-600 btn btn-block ">View Details</button></Link>
+
+
                 </div>
             </div>
+            <ToastContainer 
+            theme="dark"
+            position="top-center"
+            />
         </div>
 
     );
