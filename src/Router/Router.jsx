@@ -10,6 +10,7 @@ import MyToys from "../Components/Pages/MyToys/MyToys";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import AllToys from "../Components/Pages/AllToys/AllToys";
 import ViewDetailes from "../Components/Home/Home/ViewDetailes/ViewDetailes";
+import UpdateData from "../Components/Pages/UpdateData/UpdateData";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
             {
                 path: "detailes/:id",
                 element: <ViewDetailes />,
+                loader: ({ params }) => fetch(`https://assainment-11-sarver.vercel.app/detailes/${params.id}`)
+            },
+            {
+                path: "/update/:id",
+                element: <UpdateData />,
                 loader: ({ params }) => fetch(`https://assainment-11-sarver.vercel.app/detailes/${params.id}`)
             }
 

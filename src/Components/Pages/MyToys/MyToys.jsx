@@ -47,6 +47,8 @@ const MyToys = () => {
 
     }
 
+   
+
 
     return (
         <div>
@@ -61,7 +63,8 @@ const MyToys = () => {
                             <th>Name </th>
                             <th>Price</th>
                             <th> Quantity</th>
-                            <th>Update / Delete</th>
+                            <th> Delete</th>
+                            <th> Update</th>
                         </tr>
                     </thead>
                     {
