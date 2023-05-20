@@ -69,42 +69,44 @@ const Registration = () => {
 
     return (
         <div>
-            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+            <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
+             style={{ backgroundImage: `url("https://img.freepik.com/premium-vector/illustration-astronaut-sitting-relaxed_177315-470.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais")` }}
+            >
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
 
-                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Registration   your account</h2>
+                    <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Registration   your account</h2>
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form onSubmit={submitHandelar} className="space-y-6" action="#" method="POST">
                         <div>
-                            <label className="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                            <label className="block text-sm font-medium leading-6 text-white">Name</label>
                             <div className="mt-2">
-                                <input id="name" name="name" type="name" autoComplete="name" required className="block w-full px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input id="name" name="name" type="name" required className="block w-full px-2 rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium leading-6 text-gray-900">Photo Url</label>
+                            <label className="block text-sm font-medium leading-6 text-white">Photo Url</label>
                             <div className="mt-2">
-                                <input id="photo" name="photo" type="text" autoComplete="photo" required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input id="photo" name="photo" type="text" required className="block px-2 w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                            <label className="block text-sm font-medium leading-6 text-white">Email address</label>
                             <div className="mt-2">
-                                <input id="email" name="email" type="email" autoComplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 px-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input id="email" name="email" type="email"  required className="block w-full rounded-md border-0 py-1.5 text-white px-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                             </div>
                         </div>
 
 
                         <div>
                             <div className="flex items-center justify-between">
-                                <label className="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                                <label className="block text-sm font-medium leading-6 text-white">Password</label>
 
                             </div>
                             <div className="mt-2">
-                                <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                <input id="password" name="password" type="password"  required className="block w-full rounded-md px-2 border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                             </div>
                         </div>
@@ -116,7 +118,7 @@ const Registration = () => {
                     </form>
 
 
-                    <p className='text-center text-gray-700 mt-3 font-bold'>---------Or Continue With----------</p>
+                    <p className='text-center text-white mt-3 font-bold'>---------Or Continue With----------</p>
 
                     <div className="flex flex-col max-w-sm gap-2 mt-5">
 
@@ -132,7 +134,7 @@ const Registration = () => {
                     </div>
 
 
-                    <p className=' mt-4 font-semibold text-gray-600 text-center'>to log in Click Here<Link className=' btn btn-link text-blue-700 text-xl font-bold' to="/login">Log In</Link></p>
+                    <p className=' mt-4 font-semibold text-white text-center'>to log in Click Here<Link className=' btn btn-link  text-xl font-bold' to="/login">Log In</Link></p>
 
                 </div>
             </div>

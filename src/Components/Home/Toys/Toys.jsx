@@ -24,8 +24,8 @@ const Toys = () => {
     };
 
     return (
-        <div>
-            <h1 className='text-5xl text-center uppercase font-pera mt-10 text-orange-300'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
+        <div className="bg-slate-100">
+            <h1 className='text-5xl text-center uppercase font-pera py-10 text-orange-300'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
 
 
             <Tabs>
@@ -76,7 +76,7 @@ const Toys = () => {
                 </TabPanel>
             </Tabs>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-[90%] mx-auto">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-[90%] mx-auto ">
                 {
                     toys.map(toy => <Toy
                         key={toy._id}

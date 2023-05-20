@@ -11,21 +11,21 @@ const Gallarey = () => {
                 <FaCameraRetro className='text-3xl md:text-5xl text-orange-400 ' ></FaCameraRetro>
             </div>
             <div className="gallery w-[100%] mx-auto mt-16">
-                <span style={{ '--i': 1 }}><img src="https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFydmVsJTIwc3VwZXIlMjBoZXJvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" /></span>
+                <span style={{ '--i': 1 }}><img src="https://cdn.pixabay.com/photo/2018/05/08/11/36/avenger-3382834_640.jpg" alt="" /></span>
                 <span style={{ '--i': 2 }}><img src="https://img.freepik.com/premium-vector/spiderman-vector-illustration_677433-78.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=sph" alt="" /></span>
 
-                <span style={{ '--i': 3 }}><img src="https://images.unsplash.com/photo-1608889175250-c3b0c1667d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hcnZlbCUyMHN1cGVyJTIwaGVyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" /></span>
+                <span style={{ '--i': 3 }}><img src="https://img.freepik.com/premium-vector/silhouette-japanese-samurai-with-sword-standing-sunset_218660-576.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais" alt="" /></span>
 
                 <span style={{ '--i': 4 }}><img src="https://img.freepik.com/free-vector/superhero-character-with-pop-art-style_197582-180.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=ais" alt="" /></span>
 
 
-                <span style={{ '--i': 5 }}><img src="https://img.freepik.com/free-vector/superman_1284-17082.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais" alt="" /></span>
+                <span style={{ '--i': 5 }}><img src="https://cdn.pixabay.com/photo/2017/07/19/17/26/gabriel-2519793_640.jpg" alt="" /></span>
 
                 <span style={{ '--i': 6 }}><img src="https://img.freepik.com/free-vector/red-superhero-pop-art-poster_603843-516.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=ais" alt="" /></span>
 
-                <span style={{ '--i': 7 }}><img src="https://img.freepik.com/premium-vector/spiderman-vector-illustration_677433-78.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=sph" alt="" /></span>
+                <span style={{ '--i': 7 }}><img src="https://cdn.pixabay.com/photo/2021/07/20/14/59/iron-man-6480952_640.jpg" alt="" /></span>
 
-                <span style={{ '--i': 8 }}><img src="https://img.freepik.com/premium-vector/spiderman-vector-illustration_677433-78.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=sph" alt="" /></span>
+                <span style={{ '--i': 8 }}><img src="https://img.freepik.com/free-vector/realistic-samurai-illustrated-background_52683-69460.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais" alt="" /></span>
 
             </div>
 

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Silver Swift",
+    "image": "https://cdn.pixabay.com/photo/2021/11/05/17/09/war-6771731_640.jpg",
+    "price": 59.99,
+    "description": "A lightning-fast hero with the power to move at incredible speeds.",
+    "rating": 4.5,
+    "category": "Superhero",
+    "quantity": 10
+  },
+  {
+    "name": "Emerald Guardian",
+    "image": "https://cdn.pixabay.com/photo/2019/07/14/23/31/thanos-infinity-war-4338308_640.jpg",
+    "price": 49.99,
+    "description": "Harnesses the power of nature and possesses superhuman strength.",
+    "rating": 4.2,
+    "category": "Superhero",
+    "quantity": 8
+  },
+  {
+    "name": "Crimson Flame",
+    "image": "https://img.freepik.com/premium-vector/superhero-silhouette_23-2147510892.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais",
+    "price": 69.99,
+    "description": "Controls fire and emits flames to fight against injustice.",
+    "rating": 4.7,
+    "category": "Superhero",
+    "quantity": 12
+  },
+  {
+    "name": "Shadow Specter",
+    "image": "https://img.freepik.com/premium-vector/superhero-pose-action_24381-1121.jpg?size=626&ext=jpg&ga=GA1.2.1318835724.1670345660&semt=ais",
+    "price": 79.99,
+    "description": "Master of darkness with the ability to manipulate shadows.",
+    "rating": 4.4,
+    "category": "Superhero",
+    "quantity": 6
+  },
+  {
+    "name": "Sonic Slicer",
+    "image": "https://img.freepik.com/premium-photo/african-american-superhero-portrait-black-man-fantastic-costume-generative-ai_629315-7756.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais",
+    "price": 89.99,
+    "description": "Uses supersonic vibrations to create powerful shockwaves.",
+    "rating": 4.6,
+    "category": "Superhero",
+    "quantity": 5
+  },
+  {
+    "name": "Aqua Aura",
+    "image": "https://img.freepik.com/free-vector/superhero-changing-costume-city_603843-82.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais",
+    "price": 69.99,
+    "description": "Masters the power of water and defends the oceans from threats.",
+    "rating": 4.3,
+    "category": "Superhero",
+    "quantity": 7
+  },
+  {
+    "name": "Solar Sentinel",
+    "image": "https://img.freepik.com/premium-vector/superhero-gallant-pose_24381-736.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais",
+    "price": 99.99,
+    "description": "Harnesses solar energy to enhance strength and project solar blasts.",
+    "rating": 4.8,
+    "category": "Superhero",
+    "quantity": 3
+  },
+  {
+    "name": "Mystic Magus",
+    "image": "https://img.freepik.com/free-photo/brutal-ancient-greece-warrior-with-muscular-body-battle-uniforms-posing-dark-background_613910-19379.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais",
+    "price": 79.99,
+    "description": "Wields arcane magic and commands mystical forces.",
+    "rating": 4.4,
+    "category": "Superhero",
+    "quantity": 7
+  },
+  {
+    "name": "Gravity Guardian",
+    "image": "https://t4.ftcdn.net/jpg/02/03/27/25/240_F_203272541_u7eHqQpFIQBTBuZ3RTSDBtNcWYtU2lSn.jpg",
+    "price": 89.99,
+    "description": "Manipulates gravitational forces and controls the fabric of spacetime.",
+    "rating": 4.7,
+    "category": "Superhero",
+    "quantity": 5
+  }
+]

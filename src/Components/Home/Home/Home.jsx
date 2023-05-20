@@ -1,4 +1,5 @@
 import FetureHero from "../FetureHero/FetureHero";
+import FeturesHeros from "../FetureHero/FeturesHeros";
 import Toys from "../Toys/Toys";
 import Bannar from "./Banner/Bannar";
 import Gallarey from "./Gallarey/Gallarey";
@@ -9,8 +10,8 @@ const Home = () => {
         <div className="">
             <Bannar />
             <Gallarey />
-            <Toys />
-            <FetureHero />
+            {/* <Toys /> */}
+            <FeturesHeros />
 
         </div>
     );
