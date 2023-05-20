@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { useContext } from "react";
 import ActiveLink from "../../../ActiveLink/ActiveLink";
-import logo from "../../../assets/Add_a_heading-removebg.png"
 import { FaAlignJustify, FaGitlab } from 'react-icons/fa';
 
 

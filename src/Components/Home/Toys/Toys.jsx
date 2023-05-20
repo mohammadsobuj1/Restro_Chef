@@ -24,8 +24,8 @@ const Toys = () => {
     };
 
     return (
-        <div className="bg-slate-100">
-            <h1 className='text-5xl text-center uppercase font-pera py-10 text-orange-300'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
+        <div className="bg-slate-300">
+            <h1 className='text-5xl text-center uppercase font-pera py-10 text-orange-500'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
 
 
             <Tabs>
@@ -55,7 +55,7 @@ const Toys = () => {
                     </div></Tab>
                     <Tab><div
                         onClick={() => handleTabClick("starwear")}
-                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "starwear" ? "  bg-orange-500 font-ital text-white" : ""
+                        className={`py-3 px-5 font-medium text-xl rounded-xl ${activeTab == "starwear" ? "  bg-orange-500 font-ital text-white " : ""
                             }`}
                     >
                         Star Wear
@@ -63,16 +63,16 @@ const Toys = () => {
                 </TabList>
 
                 <TabPanel >
-                    <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>ALL <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                    <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-500'>ALL <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>marvel <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-500'>marvel <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>dc <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-500'>dc <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>star wear <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-500'>star wear <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
             </Tabs>
 

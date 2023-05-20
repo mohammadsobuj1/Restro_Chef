@@ -1,13 +1,14 @@
 import { FaCameraRetro, FaPhotoVideo } from 'react-icons/fa';
 import './Gallarey.css'
 
-const Gallarey = () => {
+
+
+const Exhibition = () => {
     return (
         <div className='body py-32'>
             <div className="flex justify-center gap-4">
-
                 <FaPhotoVideo className='text-3xl md:text-5xl text-orange-400 ' />
-                <h1 className=' text-3xl md:text-5xl  font-italic font-bold uppercase underline text-red-500'> Super Hero's galarey</h1>
+                <h1 className=' text-3xl md:text-5xl  font-italic font-bold uppercase underline text-red-500'> exhibition our Super Hero's</h1>
                 <FaCameraRetro className='text-3xl md:text-5xl text-orange-400 ' ></FaCameraRetro>
             </div>
             <div className="gallery w-[100%] mx-auto mt-16">
@@ -35,4 +36,4 @@ const Gallarey = () => {
     );
 };
 
-export default Gallarey;
+export default Exhibition;
