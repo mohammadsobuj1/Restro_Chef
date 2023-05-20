@@ -63,16 +63,16 @@ const Toys = () => {
                 </TabList>
 
                 <TabPanel >
-                    <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>ALL <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                    <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>ALL <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>marvel <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>marvel <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>dc <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>dc <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
                 <TabPanel>
-                <h1 className='text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>star wear <div className="text-gray-700 font-ital ">heros's here</div> </h1>
+                <h1 className='text-3xl md:text-5xl m-8 underline text-center uppercase font-pera mt-10 text-orange-300'>star wear <div className="text-gray-700 font-ital ">heros's here</div> </h1>
                 </TabPanel>
             </Tabs>
 

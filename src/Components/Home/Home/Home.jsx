@@ -6,7 +6,7 @@ import Gallarey from "./Gallarey/Gallarey";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <Bannar />
             <Gallarey />
             <Toys />
