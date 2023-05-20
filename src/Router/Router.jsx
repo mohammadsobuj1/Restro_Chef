@@ -11,6 +11,8 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import AllToys from "../Components/Pages/AllToys/AllToys";
 import ViewDetailes from "../Components/Home/Home/ViewDetailes/ViewDetailes";
 import UpdateData from "../Components/Pages/UpdateData/UpdateData";
+import DynamicTytile from "../Components/Pages/DyanamicTitle/DynamicTytile";
+import Error from "../Components/Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
@@ -52,10 +54,19 @@ const router = createBrowserRouter([
                 path: "/update/:id",
                 element: <UpdateData />,
                 loader: ({ params }) => fetch(`https://assainment-11-sarver.vercel.app/detailes/${params.id}`)
+            },
+            {
+                path: "/title",
+                element: <DynamicTytile />
             }
 
-        ]
+        ],
+        
     },
+    {
+        path: "*",
+        element: <Error />
+    }
 ]);
 
 export default router;

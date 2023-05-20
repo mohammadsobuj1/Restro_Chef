@@ -1,19 +1,23 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import DynamicTytile from '../../../Pages/DyanamicTitle/DynamicTytile';
 
 const ViewDetailes = () => {
     const details = useLoaderData()
     const { name, photo, sellarname, price, rating, email, quantity
-        , description, } = details;
-
-
+        , description, categorey } = details;
+    const navigate = useNavigate()
+    const backHandaler = () => {
+        navigate('/')
+        window.scrollTo(0, 0);
+    }
 
     return (
         <div>
 
-
+            <DynamicTytile title="Toy_Detailes" />
 
             <div className="  bg-gray-300 ">
                 <div className="md:text-5xl text-2xl text-center  py-3 text-orange-500 font-ital underline  ">
@@ -51,9 +55,11 @@ const ViewDetailes = () => {
                                 />
 
                             </div>
+                           
                         </div>
+                        <div className='text-xl font-ital p-2 font-semibold '> Categorey : {categorey}</div>
                         <div className='text-xl font-ital  font-semibold '> description : <div className="font-semibold font-italic text-sm lg:text-xl">{description}</div></div>
-                        <button className="btn btn-primary mt-5">Buy Now</button>
+                        <button className="btn btn-primary mt-5 " onClick={backHandaler}>Back To Home </button>
                     </div>
                 </div>
             </div>

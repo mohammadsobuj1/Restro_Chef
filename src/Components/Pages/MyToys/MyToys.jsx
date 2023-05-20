@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import DynamicTytile from '../DyanamicTitle/DynamicTytile';
 
 
 const MyToys = () => {
@@ -74,6 +75,7 @@ const MyToys = () => {
 
     return (
         <div>
+             <DynamicTytile title="My Toys" />
             <h1 className=' text-center font-semibold font-herder text-orange-300 mt-8 md:text-5xl'>  our all toys</h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
@@ -82,7 +84,9 @@ const MyToys = () => {
                         <tr >
                             <th className='text-sm font-header'>No</th>
                             <th className='text-sm font-header'>Photo</th>
-                            <th className='text-sm font-header'>Name </th>
+                            <th className='text-sm font-header'>Toy Name</th>
+                            <th className='text-sm font-header'>Saller Name</th>
+                            <th className='text-sm font-header'>Categorey</th>
                             <th className='text-sm font-header'>Price</th>
                             <th className='text-sm font-header'> Quantity</th>
                             <th className='text-sm font-header'> Delete</th>

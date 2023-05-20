@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Alltoy from './Alltoy';
 import Lottie from "lottie-react";
 import animantion from "../../../assets/85557-empty.json"
+import DynamicTytile from '../DyanamicTitle/DynamicTytile';
 
 const AllToys = () => {
     const alltoys = useLoaderData()
@@ -27,10 +28,12 @@ const AllToys = () => {
         .then(data=>{
             setAlltoys(data)
         })
+        window.scroll(0.0)
     }
 
     return (
         <>
+         <DynamicTytile title="All Toys" />
         <h1 className=' text-center font-semibold font-herder text-orange-300 mt-8 md:text-5xl'>  our all toys</h1>
             <div className="flex justify-around m-10 ">
                 <div className="dropdown ">
@@ -62,7 +65,7 @@ const AllToys = () => {
                     </thead>
                     <>{notfound}</>
                     {
-                        Alltoys.map((toy, index) => <Alltoy
+                        Alltoys?.map((toy, index) => <Alltoy
                             key={toy._id}
                             toy={toy}
                             index={index + 1}

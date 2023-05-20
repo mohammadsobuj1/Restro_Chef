@@ -1,4 +1,4 @@
-import FetureHero from "../FetureHero/FetureHero";
+import DynamicTytile from "../../Pages/DyanamicTitle/DynamicTytile";
 import FeturesHeros from "../FetureHero/FeturesHeros";
 import Gallarey from "../Gallarey/Gallarey";
 import Toys from "../Toys/Toys";
@@ -8,8 +8,10 @@ import Exhibition from "./Exhibition/Exhibition";
 
 
 const Home = () => {
+
     return (
         <div className="">
+            <DynamicTytile title="Home" />
             <Bannar />
             <Gallarey />
             <Toys />

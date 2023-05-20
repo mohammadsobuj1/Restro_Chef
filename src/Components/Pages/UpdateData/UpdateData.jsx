@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import DynamicTytile from '../DyanamicTitle/DynamicTytile';
 
 const UpdateData = () => {
     const UpdatedUser = useLoaderData()
@@ -50,7 +51,8 @@ const UpdateData = () => {
 
     return (
         <div className='bg-slate-300'>
-            <h1 className=' text-center font-semibold font-herder text-orange-300 py-5 md:text-5xl'>  update your  toys</h1>
+             <DynamicTytile title="Update_TOys" />
+            <h1 className=' text-center font-semibold font-herder text-orange-500 py-5 md:text-5xl'>  update your  toys</h1>
             <form onSubmit={SubmitHandelar}>
 
                 <div className="grid md:grid-cols-2 gap-5  w-[90%] mx-auto">

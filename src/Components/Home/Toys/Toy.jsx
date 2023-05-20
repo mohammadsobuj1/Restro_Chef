@@ -13,7 +13,7 @@ const Toy = ({ toy }) => {
 
 
 
-    const { _id, name, rating, quantity, price, photo } = toy;
+    const { _id, name, rating, quantity, price, photo, categorey } = toy;
     const { user } = useContext(AuthContext)
     const veryFiedHandaler = () => {
         if (!user) {
@@ -47,7 +47,7 @@ const Toy = ({ toy }) => {
                         className='text-xl'
                     />
                 </div>
-
+                <div className='text-xl font-ital  font-semibold '> Categorey : {categorey}</div>
                 <div className=" ">
 
                     <Link to={`detailes/${_id}`}> <button onClick={veryFiedHandaler} className=" bg-gray-600 btn btn-block ">View Details</button></Link>

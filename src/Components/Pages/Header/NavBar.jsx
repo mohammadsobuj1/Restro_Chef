@@ -30,7 +30,7 @@ const NavBar = () => {
                         <ActiveLink to="/addtoys">Add  Toy</ActiveLink>
                     </> : ""
                 }
-                <ActiveLink to="blog"> Blogs</ActiveLink>
+                <ActiveLink to="/title"> Blogs</ActiveLink>
 
             </>
         }
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <div className="">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost  sm:hidden">
-                            <FaAlignJustify  />
+                            <FaAlignJustify className="text-xl"/>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ">
                             {items}
@@ -51,12 +51,12 @@ const NavBar = () => {
                     </div>
                     <div className="flex gap-5">
                         <FaGitlab className="text-4xl" />
-                        <h1 className="uppercase font-bold text-2xl text-orange-300 font-ital">  Hero's</h1>
-                        <h1 className="font-text text-white text-2xl uppercase">univers</h1>
+                        <h1 className="uppercase font-bold md:text-2xl md:pt-0 pt-2 text-orange-300 font-ital">  Hero's</h1>
+                        <h1 className="font-text text-white md:text-2xl md:pt-0 pt-2 uppercase">univers</h1>
                     </div>
                 </div>
                 <div className=" hidden sm:flex">
-                    <ul className="menu menu-horizontal px-1 gap-5 uppercase">
+                    <ul className="menu menu-horizontal px-1 gap-5 uppercase ">
                         {items}
                     </ul>
                 </div>
@@ -67,7 +67,7 @@ const NavBar = () => {
                             {
                                 user ? <div className='flex gap-5'>
                                     <div className='md:flex gap-2 mt-2  hover: '>
-                                        <Link onClick={logOutHandelar} className='text-xl font-bold font-italic' to='/login'>Log Out</Link>
+                                        <Link onClick={logOutHandelar} className='md:text-xl font-bold font-italic' to='/login'>Log Out</Link>
 
                                     </div>
                                     <div className="tooltip  tooltip-secondary tooltip-bottom " data-tip={user.displayName}>

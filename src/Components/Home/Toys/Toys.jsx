@@ -78,7 +78,7 @@ const Toys = () => {
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-[90%] mx-auto ">
                 {
-                    toys.map(toy => <Toy
+                    toys?.map(toy => <Toy
                         key={toy._id}
                         toy={toy}
 

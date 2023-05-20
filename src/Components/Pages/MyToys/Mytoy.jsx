@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Mytoy = ({ mytoy, index, deleteHandaler }) => {
 
-    const { _id, photo, name, quantity, price } = mytoy;
+    const { _id, photo, name, quantity, price, categorey, sellarname } = mytoy;
 
 
 
@@ -29,6 +29,8 @@ const Mytoy = ({ mytoy, index, deleteHandaler }) => {
                     </td>
 
                     <td>{name}</td>
+                    <td>{sellarname}</td>
+                    <td> <div className=' font-ital  font-semibold '>  {categorey}</div></td>
                     <td className='text-orange-400 font-bold'> $ {price}</td>
                     <td className='text-gray-500 font-bold'>{quantity}</td>
                     <td>

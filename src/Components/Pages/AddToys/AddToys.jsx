@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import DynamicTytile from "../DyanamicTitle/DynamicTytile";
 
 const AddToys = () => {
     const { user } = useContext(AuthContext)
@@ -49,6 +50,7 @@ const AddToys = () => {
 
     return (
         <div className="bg-slate-300"> 
+         <DynamicTytile title="Add Toys" />
             <h1 className=' text-center font-semibold font-herder text-orange-300 py-5 md:text-5xl'>  Post your  toys</h1>
             <form onSubmit={SubmitHandelar}>
 
