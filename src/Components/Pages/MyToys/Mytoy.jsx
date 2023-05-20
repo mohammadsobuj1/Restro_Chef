@@ -14,7 +14,7 @@ const Mytoy = ({ mytoy, index, deleteHandaler }) => {
         <>
             <tbody>
                 {/* row 1 */}
-                <tr>
+                <tr className='uppercase font-medium font-ital shadow-lg'>
                     <th>{index}</th>
 
                     <td>
@@ -29,15 +29,15 @@ const Mytoy = ({ mytoy, index, deleteHandaler }) => {
                     </td>
 
                     <td>{name}</td>
-                    <td> $ {price}</td>
-                    <td>{quantity}</td>
+                    <td className='text-orange-400 font-bold'> $ {price}</td>
+                    <td className='text-gray-500 font-bold'>{quantity}</td>
                     <td>
                         <button onClick={() => deleteHandaler(_id)} className="btn btn-circle btn-outline bg-orange-300">
                             <FaRegTrashAlt className='text-xl' />
                         </button>
 
                     </td>
-                    <td> <Link to={`/update/${_id}`}><button >E</button></Link></td>
+                    <td> <Link to={`/update/${_id}`}><button className='btn btn-circle bg-orange-300 text-black hover:bg-orange-500'>Edit</button></Link></td>
                 </tr>
 
 

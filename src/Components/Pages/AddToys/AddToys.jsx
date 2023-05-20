@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
     const { user } = useContext(AuthContext)
-    console.log(user?.displayName)
+    
     const SubmitHandelar = (event) => {
 
         event.preventDefault()
@@ -31,7 +32,15 @@ const AddToys = () => {
                 if (data?.acknowledged == true) {
 
                     console.log(data)
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'A toy has been Added',
+                        showConfirmButton: false,
+                        timer: 1500
 
+                    })
+                    from.reset();
                 }
             })
 
@@ -39,7 +48,8 @@ const AddToys = () => {
 
 
     return (
-        <>
+        <div className="bg-slate-300"> 
+            <h1 className=' text-center font-semibold font-herder text-orange-300 py-5 md:text-5xl'>  Post your  toys</h1>
             <form onSubmit={SubmitHandelar}>
 
                 <div className="grid md:grid-cols-2 gap-5  w-[90%] mx-auto">
@@ -50,7 +60,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="name" name="name" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="name" name="name" type="text" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -60,7 +70,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="email" defaultValue={user?.email} name="email" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="email" defaultValue={user?.email} name="email" type="text" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -70,7 +80,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="photo" name="photo" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="photo" name="photo" type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -80,7 +90,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="price" name="price" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="price" name="price" type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -90,7 +100,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="Categorey" name="categorey" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="Categorey" name="categorey" type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -100,7 +110,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -110,7 +120,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="sellarname" name="sellarname" defaultValue={user?.displayName} type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="sellarname" name="sellarname" defaultValue={user?.displayName} type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -120,7 +130,7 @@ const AddToys = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="rating" name="rating" type="text" autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="rating" name="rating" type="text" autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -136,17 +146,17 @@ const AddToys = () => {
                     <div className="mt-2">
 
                         <textarea id="description" name="description" cols="60" rows="5"
-                            className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         ></textarea>
 
                     </div>
                 </div>
                 <div className="text-center mt-5 w-[50%] mx-auto">
-                    <input className="btn btn-block" type="submit" value="Submit" />
+                    <input className="btn btn-block mb-8" type="submit" value="Submit" />
                 </div>
             </form>
 
-        </>
+        </div>
     );
 };
 

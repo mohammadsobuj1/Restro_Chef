@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateData = () => {
     const UpdatedUser = useLoaderData()
@@ -29,8 +30,17 @@ const UpdateData = () => {
             .then(res => res.json())
             .then(data => {
 
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Your toy has been Updated',
+                        showConfirmButton: false,
+                        timer: 1500
 
-                console.log(data)
+                    })
+                }
+                from.reset();
 
 
             })
@@ -39,7 +49,8 @@ const UpdateData = () => {
     }
 
     return (
-        <div>
+        <div className='bg-slate-300'>
+            <h1 className=' text-center font-semibold font-herder text-orange-300 py-5 md:text-5xl'>  update your  toys</h1>
             <form onSubmit={SubmitHandelar}>
 
                 <div className="grid md:grid-cols-2 gap-5  w-[90%] mx-auto">
@@ -50,7 +61,7 @@ const UpdateData = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="name" defaultValue={UpdatedUser?.name} name="name" type="text" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="name" defaultValue={UpdatedUser?.name} name="name" type="text" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -61,7 +72,7 @@ const UpdateData = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="photo" name="photo" type="text" defaultValue={UpdatedUser?.photo}  autoComplete="current-password" required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="photo" name="photo" type="text" defaultValue={UpdatedUser?.photo} autoComplete="current-password" required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -71,7 +82,7 @@ const UpdateData = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="price" name="price" type="text" autoComplete="current-password" defaultValue={UpdatedUser?.price} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="price" name="price" type="text" autoComplete="current-password" defaultValue={UpdatedUser?.price} required className="block w-full text-xl bg-gray-100 font-semibold font-italic  rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
@@ -82,21 +93,11 @@ const UpdateData = () => {
 
                         </div>
                         <div className="mt-2">
-                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" defaultValue={UpdatedUser?.quantity} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            <input id="Quantity" name="quantity" type="text" autoComplete="current-password" defaultValue={UpdatedUser?.quantity} required className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                         </div>
                     </div>
-                    {/* <div className="">
-                        <div className="flex items-center justify-between">
-                            <label className="block text-sm font-medium leading-6 text-gray-900">Saller Name</label>
 
-                        </div>
-                        <div className="mt-2">
-                            <input id="sellarname" name="sellarname" type="text" autoComplete="current-password" defaultValue={user?.displayName} required className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-
-                        </div>
-                    </div>
-                   */}
                     <br />
 
                 </div>
@@ -108,13 +109,13 @@ const UpdateData = () => {
                     <div className="mt-2">
 
                         <textarea id="description" name="description" defaultValue={UpdatedUser?.description} cols="60" rows="5"
-                            className="block w-full rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full text-xl bg-gray-100 font-semibold font-italic rounded-md px-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         ></textarea>
 
                     </div>
                 </div>
                 <div className="text-center mt-5 w-[50%] mx-auto">
-                    <input className="btn btn-block" type="submit" value="Submit" />
+                    <input className="btn btn-block mb-8" type="submit" value="Update" />
                 </div>
             </form>
 

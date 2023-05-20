@@ -51,7 +51,7 @@ const AllToys = () => {
                     {/* head */}
                     <thead >
                         <tr >
-                            <th>No</th>
+                            <th className='text-sm font-header'>No</th>
                             <th className='text-sm font-header'>Saller Name</th>
                             <th className='text-sm font-header'>Name </th>
                             <th className='text-sm font-header'>Category</th>
