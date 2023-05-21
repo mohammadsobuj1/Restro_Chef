@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import DynamicTytile from "../DyanamicTitle/DynamicTytile";
 
 
 
@@ -69,6 +70,7 @@ const Registration = () => {
 
     return (
         <div>
+             <DynamicTytile title="Registration" />
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
              style={{ backgroundImage: `url("https://img.freepik.com/premium-vector/illustration-astronaut-sitting-relaxed_177315-470.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais")` }}
             >

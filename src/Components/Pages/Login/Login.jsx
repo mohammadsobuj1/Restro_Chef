@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import DynamicTytile from '../DyanamicTitle/DynamicTytile';
 
 const Login = () => {
     const { logIn, googlelogIn } = useContext(AuthContext)
@@ -42,6 +43,7 @@ const Login = () => {
 
     return (
         <div className=''>
+        <DynamicTytile title="Log_In" />
             <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 "
                 style={{ backgroundImage: `url("https://img.freepik.com/premium-vector/superhero-silhouette_23-2147510892.jpg?size=626&ext=jpg&ga=GA1.1.1318835724.1670345660&semt=ais")` }}
             >

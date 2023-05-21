@@ -1,8 +1,10 @@
 import React from 'react';
+import DynamicTytile from '../DyanamicTitle/DynamicTytile';
 
 const Bologs = () => {
     return (
         <div>
+             <DynamicTytile title="Bolg" />
             <h1 className='font-sans font-bold underline text-orange-500 mt-5 text-center text-3xl'>Answer & Qustion</h1>
             <div className="md:flex border-4 bg-gray-300 border-orange-300 p-8 w-[80%] mx-auto mt-12 rounded-md">
                 <div className=''>
