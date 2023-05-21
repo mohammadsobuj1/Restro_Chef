@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Alltoy from './Alltoy';
 import Lottie from "lottie-react";
@@ -14,42 +14,43 @@ const AllToys = () => {
         fetch(`https://assainment-11-sarver.vercel.app/searchBy/${nameField}`)
             .then(res => res.json())
             .then(data => {
+                
                 setAlltoys(data)
+                
                 if (data.length <= 0) {
                     setNotfound(<Lottie className=' text-center w-[75%] mx-auto' animationData={animantion} loop={true} />)
                 }
+                
+
             })
     }
-
-    const shortHandaler =(sort)=>{
-    
-        fetch(`https://assainment-11-sarver.vercel.app/${sort}`)
-        .then(res=>res.json())
-        .then(data=>{
-            setAlltoys(data)
-        })
-        window.scroll(0.0)
+    const sliceeeHandaler=()=>{
+        setAlltoys(alltoys)
     }
+
+useEffect(()=>{
+    if(alltoys.length >20){
+        setAlltoys(alltoys.slice(0, 20))
+    }
+   
+      
+   
+},[])
+
 
     return (
         <>
-         <DynamicTytile title="All Toys" />
-        <h1 className=' text-center font-semibold font-herder text-orange-300 mt-8 md:text-5xl'>  our all toys</h1>
-            <div className="flex justify-around m-10 ">
-                <div className="dropdown ">
-                    <label tabIndex={0} className="btn btn-outline btn-success  m-1">Short By Price</label>
-                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><button className=' btn-sm bg-slate-400 text-bold' onClick={()=>shortHandaler("asen")}>  Asending Order</button></li>
-                        <li><button className='mt-2  btn-sm text-bold bg-slate-400' onClick={()=>shortHandaler("desan")}>Desending Order</button></li>
-                    </ul>
-                </div>
+            <DynamicTytile title="All Toys" />
+            <h1 className=' text-center font-semibold font-herder text-orange-300 m-8 md:text-5xl'>  our all toys</h1>
+            <div className="flex justify-around mb-14 ">
+
                 <div className=" flex  gap-4">
                     <input onChange={(e) => setNamefield(e.target.value)} className='border-3 bg-slate-300  px-6 py-2 rounded-md text-xl font-serif' placeholder='Type Name' type="text" />
                     <button onClick={searchHandaler} className='btn btn-outline btn-success'>Search</button>
                 </div>
 
             </div>
-            <div className="overflow-x-auto mt-5">
+            <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead >
@@ -77,7 +78,9 @@ const AllToys = () => {
             </div>
 
 
-
+          <div className="w-[50%] mx-auto mt-8">
+          <button onClick={sliceeeHandaler} className='btn btn-block '>all</button>
+          </div>
         </>
     );
 };

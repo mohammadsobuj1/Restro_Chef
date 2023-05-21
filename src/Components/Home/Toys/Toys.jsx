@@ -5,10 +5,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Toy from './Toy';
 
+
+
 const Toys = () => {
     const [activeTab, setActiveTab] = useState("all");
     const [toys, setToys] = useState([]);
-
+   
+      
 
     useEffect(() => {
         fetch(`https://assainment-11-sarver.vercel.app/alltoys/${activeTab}`)
@@ -16,6 +19,7 @@ const Toys = () => {
             .then(data => {
                 setToys(data)
             })
+          
     }, [activeTab])
 
     const handleTabClick = (tabName) => {
@@ -24,7 +28,7 @@ const Toys = () => {
     };
 
     return (
-        <div className="bg-slate-300">
+        <div className="bg-slate-300"  >
             <h1 className='text-5xl text-center uppercase font-pera py-10 text-orange-500'>Our Hero's <div className="text-gray-700 font-ital ">Categorey</div> </h1>
 
 
@@ -76,7 +80,7 @@ const Toys = () => {
                 </TabPanel>
             </Tabs>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-[90%] mx-auto ">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 w-[90%] mx-auto " data-aos="fade-up">
                 {
                     toys?.map(toy => <Toy
                         key={toy._id}

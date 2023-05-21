@@ -5,7 +5,7 @@ import '@smastrom/react-rating/style.css'
 const FetureHero = ({ hero }) => {
     const { name, image, price, description, rating, category, quantity } = hero;
     return (
-        <div className=''>
+        <div className='' >
             <section
                 className=" h-screen flex justify-center items-center gap-x-16 text-white "
             >

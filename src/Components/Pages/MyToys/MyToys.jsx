@@ -39,7 +39,7 @@ const MyToys = () => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
 
                 fetch(`https://assainment-11-sarver.vercel.app/mytoys/${id}`, {
@@ -55,7 +55,7 @@ const MyToys = () => {
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
-                              )
+                            )
                             const remaining = mytoys.filter(toy => toy._id !== id)
                             setMytoys(remaining)
 
@@ -69,14 +69,29 @@ const MyToys = () => {
         })
 
     }
+    const shortHandaler = (sort) => {
 
+        fetch(`https://assainment-11-sarver.vercel.app/${sort}`)
+            .then(res => res.json())
+            .then(data => {
+                setMytoys(data)
+            })
+       
+    }
 
 
 
     return (
         <div>
-             <DynamicTytile title="My Toys" />
-            <h1 className=' text-center font-semibold font-herder text-orange-300 mt-8 md:text-5xl'>  our all toys</h1>
+            <DynamicTytile title="My Toys" />
+            <h1 className=' text-center font-semibold font-herder text-orange-300 mt-8 md:text-5xl'>  my  toys</h1>
+            <div className="dropdown ">
+                <label tabIndex={0} className="btn btn-outline btn-success  m-1">Short By Price</label>
+                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><button className=' btn-sm bg-slate-400 text-bold' onClick={() => shortHandaler("asen")}>  Asending Order</button></li>
+                    <li><button className='mt-2  btn-sm text-bold bg-slate-400' onClick={() => shortHandaler("desan")}>Desending Order</button></li>
+                </ul>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     {/* head */}

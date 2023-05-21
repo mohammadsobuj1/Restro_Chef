@@ -30,7 +30,7 @@ const NavBar = () => {
                         <ActiveLink to="/addtoys">Add  Toy</ActiveLink>
                     </> : ""
                 }
-                <ActiveLink to="/title"> Blogs</ActiveLink>
+                <ActiveLink to="/bolg"> Blogs</ActiveLink>
 
             </>
         }

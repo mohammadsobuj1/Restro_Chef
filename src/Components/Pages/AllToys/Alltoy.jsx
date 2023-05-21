@@ -20,6 +20,7 @@ const Alltoy = ({ toy, index }) => {
           </div></td>
         </tr>
       </tbody>
+   
     </>
   );
 };

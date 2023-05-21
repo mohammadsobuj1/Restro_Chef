@@ -13,6 +13,7 @@ import ViewDetailes from "../Components/Home/Home/ViewDetailes/ViewDetailes";
 import UpdateData from "../Components/Pages/UpdateData/UpdateData";
 import DynamicTytile from "../Components/Pages/DyanamicTitle/DynamicTytile";
 import Error from "../Components/Pages/Error/Error";
+import Bologs from "../Components/Pages/Blogs/Bologs";
 
 const router = createBrowserRouter([
     {
@@ -58,10 +59,14 @@ const router = createBrowserRouter([
             {
                 path: "/title",
                 element: <DynamicTytile />
+            },
+            {
+                path: "/bolg",
+                element: <Bologs />
             }
 
         ],
-        
+
     },
     {
         path: "*",
