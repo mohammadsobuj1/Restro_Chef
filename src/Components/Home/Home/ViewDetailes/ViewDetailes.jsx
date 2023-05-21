@@ -24,7 +24,7 @@ const ViewDetailes = () => {
                     Here's is {name} Detailes
                 </div>
                 <div className="hero-content flex-col  md:flex-row justify-around">
-                    <img src={photo} className=" rounded-lg shadow-2xl" />
+                    <img src={photo} className=" rounded-lg shadow-2xl w-[full] md:w-[50%] mx-auto" />
                     <div>
                         <div className="md:flex md:py-3">
 

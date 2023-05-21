@@ -11,6 +11,14 @@ const Alltoy = ({ toy, index }) => {
         <tr className='uppercase font-medium font-ital shadow-lg'>
           <th>{index}</th>
           <td className='text-gray-500 font-bold'>{sellarname}</td>
+          <td ><div className="flex items-center space-x-3">
+                            <div className="avatar">
+                                <div className="mask mask-squircle w-12 h-12">
+                                    <img src={photo} />
+                                </div>
+                            </div>
+
+                        </div></td>
           <td>{name}</td>
           <td>{categorey}</td>
           <td className='text-orange-400 font-bold'>$ {price}</td>

@@ -16,9 +16,9 @@ const UpdateData = () => {
         const quantity = from.quantity.value;
         const description = from.description.value;
 
-        console.log(UpdatedUser._id)
+       
         const datas = { name, photo, price, quantity, description }
-        console.log(datas)
+        
 
 
         fetch(`https://assainment-11-sarver.vercel.app/update/${UpdatedUser?._id}`, {

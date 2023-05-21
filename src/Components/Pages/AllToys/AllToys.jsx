@@ -57,6 +57,7 @@ useEffect(()=>{
                         <tr >
                             <th className='text-sm font-header'>No</th>
                             <th className='text-sm font-header'>Saller Name</th>
+                            <th className='text-sm font-header'>Photo</th>
                             <th className='text-sm font-header'>Name </th>
                             <th className='text-sm font-header'>Category</th>
                             <th className='text-sm font-header'>Price</th>

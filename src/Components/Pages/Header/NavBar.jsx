@@ -49,10 +49,13 @@ const NavBar = () => {
                             {items}
                         </ul>
                     </div>
-                    <div className="flex gap-5">
-                        <FaGitlab className="text-4xl" />
+                    <div className="flex gap-3">
+                    <img src="https://i.postimg.cc/7LsSPGr4/Add-a-heading-removebg.png" width={50} alt="" />
                         <h1 className="uppercase font-bold md:text-2xl md:pt-0 pt-2 text-orange-300 font-ital">  Hero's</h1>
                         <h1 className="font-text text-white md:text-2xl md:pt-0 pt-2 uppercase">univers</h1>
+                      <div className="">
+                      <FaGitlab className="lg:text-4xl mr-2 text-xl " />
+                      </div>
                     </div>
                 </div>
                 <div className=" hidden sm:flex">
@@ -65,7 +68,7 @@ const NavBar = () => {
                         <div className="mt-3 mr-2">
 
                             {
-                                user ? <div className='flex gap-5'>
+                                user ? <div className='flex md:gap-5'>
                                     <div className='md:flex gap-2 mt-2  hover: '>
                                         <Link onClick={logOutHandelar} className='md:text-xl font-bold font-italic' to='/login'>Log Out</Link>
 
