@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Swal from 'sweetalert2';
 
 
 
@@ -23,7 +24,12 @@ const Toy = ({ toy }) => {
     const { user } = useContext(AuthContext)
     const veryFiedHandaler = () => {
         if (!user) {
-            toast.error("Log In First")
+            Swal.fire({
+                icon: 'error',
+                title: 'Log In First ',
+                text: 'You are Not Log In!',
+               
+              })
          
         }
        
@@ -68,10 +74,7 @@ const Toy = ({ toy }) => {
 
                 </div>
             </div>
-            <ToastContainer 
-            theme="dark"
-            position="top-center"
-            />
+          
         </div>
 
     );
